@@ -19,14 +19,8 @@ function Write-Bad  { param( $String ) Write-Host $Global:ErrorLine $String -For
 function Write-Info { param( $String ) Write-Host $Global:InfoLine $String -ForegroundColor 'gray' }
 function ShowBanner {
     $banner  = @()
-    $banner+= $Global:Spacing + ''
-    $banner+= $Global:Spacing + '██╗   ██╗██╗   ██╗██╗     ███╗   ██╗ █████╗ ██████╗ '
-    $banner+= $Global:Spacing + '██║   ██║██║   ██║██║     ████╗  ██║██╔══██╗██╔══██╗'
-    $banner+= $Global:Spacing + '██║   ██║██║   ██║██║     ██╔██╗ ██║███████║██║  ██║'
-    $banner+= $Global:Spacing + '╚██╗ ██╔╝██║   ██║██║     ██║╚██╗██║██╔══██║██║  ██║'
-    $banner+= $Global:Spacing + ' ╚████╔╝ ╚██████╔╝███████╗██║ ╚████║██║  ██║██████╔╝'
-    $banner+= $Global:Spacing + '  ╚═══╝   ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═════╝'
-    $banner+= $Global:Spacing + ''                                                  
+    $banner+= $Global:Spacing + 'VULNAD'
+    $banner+= $Global:Spacing + ':)'                                                  
     $banner+= $Global:Spacing + 'By wazehell @safe_buffer'
     $banner | foreach-object {
         Write-Host $_ -ForegroundColor (Get-Random -Input @('Green','Cyan','Yellow','gray','white'))
